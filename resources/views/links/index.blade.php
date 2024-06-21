@@ -78,6 +78,8 @@
                 <th>Name</th>
                 <th>Created By</th>
                 <th>Updated By</th>
+                <th>Created At</th>
+                <th>Updated At</th>
                 <th>Status</th>
             </tr>
         </thead>
@@ -89,6 +91,8 @@
                     <td>{{ $link->name }}</td>
                     <td>{{ $link->created_by }}</td>
                     <td>{{ $link->updated_by }}</td>
+                    <td>{{ $link->created_at }}</td>
+                    <td>{{ $link->updated_at }}</td>
                     <td>{{ $link->status }}</td>
                 </tr>
             @endforeach
