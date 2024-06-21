@@ -18,8 +18,8 @@ class Link extends Model
     public static function generateShortLink()
     {
         do {
-            $shortLink = Str::random(6); // Generate a random string of 6 characters
-        } while (self::where('short_link', $shortLink)->exists()); // Ensure it's unique
+            $shortLink = Str::random(6);
+        } while (self::where('short_link', $shortLink)->exists());
 
         return $shortLink;
     }

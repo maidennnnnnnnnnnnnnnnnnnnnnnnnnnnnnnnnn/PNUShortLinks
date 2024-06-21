@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Link;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class LinkController extends Controller
@@ -30,6 +31,8 @@ class LinkController extends Controller
         $link->short_link = Link::generateShortLink();
         $link->created_by = 'user';
         $link->updated_by = $link->created_by;
+        $link->created_at = Carbon::now();
+        $link->updated_at = Carbon::now();
         $link->status = 'active';
         $link->save();
 
