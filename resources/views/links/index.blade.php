@@ -75,11 +75,10 @@
             <tr>
                 <th>ID</th>
                 <th>Short Link</th>
+                <th>Original Link</th>
                 <th>Name</th>
                 <th>Created By</th>
-                <th>Updated By</th>
                 <th>Created At</th>
-                <th>Updated At</th>
                 <th>Status</th>
             </tr>
         </thead>
@@ -88,11 +87,10 @@
                 <tr>
                     <td>{{ $link->id }}</td>
                     <td><a href="{{ url($link->short_link) }}">{{ $link->short_link }}</a></td>
+                    <td><a href="{{ url($link->original_link) }}">{{ $link->original_link }}</a></td>
                     <td>{{ $link->name }}</td>
                     <td>{{ $link->created_by }}</td>
-                    <td>{{ $link->updated_by }}</td>
                     <td>{{ $link->created_at }}</td>
-                    <td>{{ $link->updated_at }}</td>
                     <td>{{ $link->status }}</td>
                 </tr>
             @endforeach
