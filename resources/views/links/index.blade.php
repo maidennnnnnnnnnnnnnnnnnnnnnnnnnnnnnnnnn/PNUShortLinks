@@ -76,7 +76,7 @@
                 <th>ID</th>
                 <th>Original Link</th>
                 <th>Short Link</th>
-                <th>Name</th>
+                <th>Link Name</th>
                 <th>Created By</th>
                 <th>Created At</th>
                 <th>Status</th>
