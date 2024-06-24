@@ -21,12 +21,21 @@ Route::get("/test", function() {
     phpinfo();
 });
 
-Route::get("/links/asd", function() {
-    return view('links.asd');
-})->name('links.asd');
+Route::get("/links/custom_not_found", function() {
+    return view('links.custom_not_found');
+})->name('links.custom_not_found');
+
+Route::get("/links/custom_no_response", function() {
+    return view('links.custom_no_response');
+})->name('links.custom_no_response');
+
 
 Route::resource("/link", LinkController::class);
 Route::get('/links', [LinkController::class, 'index'])->name('link.index');
 Route::get('/links/create', [LinkController::class, 'create'])->name('link.create');
 Route::post('/links', [LinkController::class, 'store'])->name('link.store');
 Route::get('/{short_link}', [LinkController::class, 'redirectToLink'])->name('link.redirect');
+Route::get('/links/custom_no_response', function() {
+
+    return view('links.custom_no_response');
+})->name('links.custom_no_response');

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Link;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redirect;
 
 class LinkController extends Controller
 {
@@ -43,9 +45,9 @@ class LinkController extends Controller
         $link = Link::where('short_link', $short_link)->first();
 
         if (!$link) {
-
-            return redirect()->route('links.asd'); // Redirect to custom 404 page
+            return redirect()->route('links.custom_not_found');
         }
+
 
         // Redirect to the original link
         return redirect($link->original_link);

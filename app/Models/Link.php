@@ -15,7 +15,7 @@ class Link extends Model
         'original_link', 'name', 'updated_by', 'status'
     ];
 
-    public static function generateShortLink()
+    public static function generateShortLink(): string
     {
         do {
             $shortLink = Str::random(6);
@@ -23,4 +23,6 @@ class Link extends Model
 
         return $shortLink;
     }
+
+
 }
